@@ -6,7 +6,8 @@ public class Calculator {
 		System.out.println("===Addition===");
 		System.out.println("Number One : "+num1);
 		System.out.println("Number Two : "+num2);
-		System.out.println("Result : "+num1 + " + "+num2);
+		int result = num1 + num2;
+		System.out.println("Result : "+num1 + " + "+num2 + " = "+result);
 		return num1 + num2;
 	}
 
@@ -14,7 +15,8 @@ public class Calculator {
 		System.out.println("===Subtraction===");
 		System.out.println("Number One : "+num1);
 		System.out.println("Number Two : "+num2);
-		System.out.println("Result : "+num1 + " - "+num2);
+		int result = num1 - num2;
+		System.out.println("Result : "+num1 + " - "+num2 + " = "+result);
 		return num1 - num2;
 	}
 
