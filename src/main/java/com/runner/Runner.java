@@ -12,8 +12,9 @@ public class Runner {
 		System.out.println("CALCULATOR APP");
 		Calculator cal = new Calculator();
 		System.out.println(cal.add(10, 20));
-		System.out.println("");
 		System.out.println(cal.sub(40,10));
+		System.out.println(cal.multiply(11,12));
+		System.out.println(cal.divide(40,10));
 		
 	}
 }
