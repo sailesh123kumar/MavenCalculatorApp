@@ -6,6 +6,31 @@ import org.testng.annotations.Test;
 
 import com.calculatorapp.Calculator;
 
+/**
+ * Maven commands:
+ *
+ * <pre>
+ * mvn clean              - Deletes the artifacts in target folder
+ * mvn validate           - Checks project structure in pom.xml
+ * mvn compile            - Compiles classes in src/main/java
+ * mvn test-compile       - Compiles classes in src/test/java
+ * mvn test               - Executes test classes
+ *                          (maven-surefire plugin auto-binds to run tests)
+ * mvn package            - Creates jar file in target folder
+ * mvn verify             - Runs verification checks (e.g. vulnerability)
+ * mvn install            - Installs jar into local .m2 repository
+ * mvn deploy             - Deploys project to remote repo (e.g. Nexus)
+ *                          (helps share reusable code across teams)
+ *
+ * Additional useful commands:
+ * mvn -Dbrowser=Chrome test
+ * mvn -Dtest=CalculatorTest.java test
+ * mvn -Dtest=CalculatorTest.java#methodName test
+ * mvn package -DskipTests
+ * </pre>
+ */
+
+
 
 
 public class CalculatorTest {
@@ -14,6 +39,13 @@ public class CalculatorTest {
 
 	@Test(description = "Verify Calculator Add Functionality for addition of 2 Numbers", groups = {"smoke", "sanity"})
 	public void add_TwoIntegerNumbers_returnResult() {
+		System.out.println("");
+		System.out.println("==================================");
+		String browserName = System.getProperty("browser");
+		System.out.println("");
+		System.out.println("Browser Name : "+browserName);
+		System.out.println("");
+		System.out.println("==================================");
 		assertEquals(cal.add(20, 30), 50);
 	}
 
