@@ -34,7 +34,7 @@ public class CalculatorIT {
 	}
 
 	
-	@Test
+	@Test(description = "Verify output file is created and the content matches as Expected")
 	public void calculatorIntegrationTest() {
 		int addResult = cal.add(20, 10);
 		int subResult = cal.sub(20, 10);
